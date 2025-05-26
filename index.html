@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SupplyChain DApp</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>SupplyChain DApp</h1>
+      <button id="connectButton">Connect Wallet</button>
+      <div id="walletAddress"></div>
+
+      <section>
+        <h2>Add Product</h2>
+        <input type="text" id="productName" placeholder="Enter Product Name" />
+        <button id="addProductButton">Add Product</button>
+      </section>
+
+      <section>
+        <h2>Transfer Product Ownership</h2>
+        <input
+          type="number"
+          id="transferProductId"
+          placeholder="Enter Product ID"
+        />
+        <input
+          type="text"
+          id="newOwner"
+          placeholder="Enter New Owner Address"
+        />
+        <button id="transferProductButton">Transfer Ownership</button>
+      </section>
+
+      <section>
+        <h2>Add Product Event</h2>
+        <input type="number" id="eventProductId" placeholder="Enter Product ID" />
+        <input
+          type="text"
+          id="eventDescription"
+          placeholder="Enter Event Description"
+        />
+        <button id="addEventButton">Add Event</button>
+      </section>
+
+      <section>
+        <h2>Get Product Events</h2>
+        <input
+          type="number"
+          id="getEventsProductId"
+          placeholder="Enter Product ID"
+        />
+        <button id="getEventsButton">Get Events</button>
+        <div id="eventsOutput"></div>
+      </section>
+
+      <div id="status"></div>
+    </div>
+
+    <!-- Include Ethers.js -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
